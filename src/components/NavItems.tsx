@@ -1,10 +1,13 @@
 'use client'
 
 import { PRODUCT_CATEGORIES } from '@/config'
+import NavItem from './NavItem'
 import { useState } from 'react'
 
 const NavItems = () => {
   const [activeIndex, setActiveIndex] = useState<null | number>(null)
+
+  const isAnyOpen = activeIndex !== null
 
   return (
     <div className="flex gap-4 h-full">
@@ -17,7 +20,15 @@ const NavItems = () => {
           }
         }
         const isOpen = i === activeIndex
-        return <NavItems key={i} />
+        return (
+          <NavItem
+            key={category.value}
+            category={category}
+            handleOpen={handleOpen}
+            isOpen={isOpen}
+            isAnyOpen={isAnyOpen}
+          />
+        )
       })}
     </div>
   )
