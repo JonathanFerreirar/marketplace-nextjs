@@ -1,11 +1,9 @@
-import React from 'react'
-import MaxWidthWrapper from './MaxWidthWrapper'
 import Link from 'next/link'
-import { Icons } from './icons'
-import NavItems from './NavItems'
-import { buttonVariants } from './ui/button'
-import { Divide } from 'lucide-react'
 import Cart from './Cart'
+import MaxWidthWrapper from './MaxWidthWrapper'
+import NavItems from './NavItems'
+import { Icons } from './icons'
+import { buttonVariants } from './ui/button'
 
 const Navbar = () => {
   const user = null
